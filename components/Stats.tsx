@@ -17,7 +17,7 @@ export const Stats = () => {
   return (
     <>
       {isConnected && (
-        <div className="absolute top-[10%] w-full flex flex-col items-center justify-center space-y-6">
+        <div className="absolute top-[20%] w-full flex flex-col items-center justify-center space-y-6">
           <div className="w-full flex items-center justify-center space-x-4">
             <div className="aspect-square bg-white rounded-[60px] h-[35vh] relative flex items-center justify-between flex-col py-8">
               <Image

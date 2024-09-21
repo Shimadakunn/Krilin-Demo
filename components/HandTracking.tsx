@@ -324,9 +324,9 @@ const HandGestureWalletConnect: React.FC = () => {
   return (
     <div className="relative w-screen h-screen">
       {/* Header */}
-      <div className="absolute w-full h-[10vh] top-0 transform z-20 px-8 flex items-center justify-between">
-        <Image src={Krilin} alt="Krilin" className="w-44" />
-        {isConnected && (
+      <div className="absolute w-full top-0 transform z-20 px-12 pt-12 flex items-center justify-between">
+        <Image src={Krilin} alt="Krilin" className="w-48" />
+        {isConnected ? (
           <div className="flex items-center">
             <div className="mr-2">
               {address?.slice(0, 6) + "..." + address?.slice(-6, -1)}
@@ -336,7 +336,7 @@ const HandGestureWalletConnect: React.FC = () => {
               onClick={handleDisconnect}
               className="border-2 text-black border-black rounded-full py-2 px-4"
               style={{
-                backgroundColor: disconnectButtonClicked ? "#0F3272" : "",
+                backgroundColor: disconnectButtonClicked ? "#C0C0C0" : "",
                 cursor: "pointer",
                 transition: "background-color 0.3s ease",
               }}
@@ -344,6 +344,8 @@ const HandGestureWalletConnect: React.FC = () => {
               Disconnect
             </button>{" "}
           </div>
+        ) : (
+          <Image src={Kiln} alt="Kiln" className="w-44" />
         )}
       </div>
 
@@ -353,7 +355,7 @@ const HandGestureWalletConnect: React.FC = () => {
           <Image
             src={Illustration2}
             alt="illustration"
-            className="absolute bottom-6 left-1/2 w-[60vw] -translate-x-1/2"
+            className="absolute bottom-6 left-1/2 w-[80vw] -translate-x-1/2"
           />
           <div className="absolute top-[30%] w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center flex-col space-y-8">
             <h1 className="text-5xl font-bold">
@@ -376,7 +378,7 @@ const HandGestureWalletConnect: React.FC = () => {
         </>
       ) : (
         <>
-          <div className="absolute top-[65%] w-[80vw] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-around">
+          <div className="absolute top-[75%] w-[80vw] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-around">
             <motion.div
               className="relative w-64 aspect-square flex items-center justify-center stake-area"
               onHoverStart={() => setIsStakeHovered(true)}
